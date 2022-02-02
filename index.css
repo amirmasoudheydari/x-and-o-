@@ -40,3 +40,17 @@ p{
     color: red;
     font-size: 30px;
 }
+
+.resetBtn{
+    text-align: center;
+}
+
+.resetBtn span{
+    color: white;
+    background-color: red;
+    padding: 8px 30px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -1,5 +1,7 @@
 
 let $ul = document.querySelector('.ul')
+let $reset = document.querySelector('#reset')
+let $message = document.querySelector('#message')
 
 let count = 0;
 let items = {};
@@ -26,21 +28,16 @@ $ul.onclick = (event) => {
             o[_id] = 'o'
         }
         
-        
         count += 1;
         if(count > 4){
             handelClick();
         }
-        if(count == 9){
-            setTimeout(() => {
-                window.location.reload();
-              }, 1000)
+        console.log($message.length);
+        if(count == 9 && $message.length == undefined){
+            $message.innerText = 'بدون برنده';
+            $ul.onclick = ''
         }
-
-        
-        
     }
-
 }
 
 function handelClick(){
@@ -63,11 +60,8 @@ function handelClick(){
                 }
 
                 if(xx == 3){
-                    let message = document.querySelector('#message')
-                    message.innerText = 'user2 برنده شد'
-                    setTimeout(() => {
-                        window.location.reload();
-                      }, 1000)
+                    $message.innerText = 'user2 برنده شد'
+                    $ul.onclick = ''
                 }
             })
         })
@@ -85,19 +79,14 @@ function handelClick(){
                 }
 
                 if(xx == 3){
-                    let message = document.querySelector('#message')
-                    message.innerText = 'user1 برنده شد'
-                    setTimeout(() => {
-                        window.location.reload();
-                      }, 1000)
+                   $message.innerText = 'user1 برنده شد'
+                    $ul.onclick = ''
                 }
             })
         })
     }
-
-    
-
-    
-
 }
 
+$reset.onclick = () =>{
+    window.location.reload();
+}
