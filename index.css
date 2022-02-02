@@ -1,0 +1,42 @@
+
+.wraper{
+    width: 300px;
+    margin: auto;
+}
+
+ul{
+    width: 300px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+}
+
+li{
+    list-style: none;
+    width: 70px;
+    height: 45px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+li span{
+    font-size: 30px;
+}
+
+
+ul{
+    display: flex;
+}
+
+p{
+    text-align: center;
+    color: red;
+    font-size: 30px;
+}
